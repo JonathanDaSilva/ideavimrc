@@ -1,0 +1,108 @@
+" Basic Options      {{{
+set nocompatible
+set hidden
+let mapleader=','
+set backspace=2
+set autoread autowrite
+set wrap textwidth=0 linebreak
+set clipboard=unnamed
+set ignorecase smartcase
+set nohlsearch
+set scrolloff=7
+" Edit Vimrc and reload vimrc
+nnoremap <Leader>ev <ESC>:e $myvimrc<CR>
+nnoremap <Leader>af <ESC>:so %<CR>
+" Indent
+set autoindent smartindent
+set tabstop=2 shiftwidth=2 expandtab
+set shiftround
+" fileencoding
+if has('vim_starting')
+  set encoding=utf-8 fileencoding=utf-8
+endif
+set ff=unix ffs=unix
+" Keep selection while indent
+vnoremap < <gv
+vnoremap > >gv
+
+let $profile = $PSProfile
+
+" Shortcut           {{{
+
+" Search and center
+nnoremap n nzz
+" Alphabetical sorting selection
+vnoremap <leader><leader>s :sort<cr>
+" Help coding
+" inoremap .. ->
+" inoremap ... ..
+" Window Spliting
+noremap wc  <C-w>h
+noremap wt  <C-w>j
+noremap ws  <C-w>k
+noremap wr  <C-w>l
+noremap wd  <Esc>:close<CR>
+noremap w<Space> <Esc>:vsplit<CR>
+noremap w<CR> <Esc>:split<CR>
+" New Tab shortcut
+noremap <leader>nt <Esc>:tabnew<CR>
+noremap <C-t> <Esc>:tabnew<CR>
+noremap <C-Tab> <Esc>:tabnext<CR>
+" Switching between highlight search or not
+map <Leader><Leader><Space> :set hlsearch!<CR>
+" Save
+nnoremap <C-s> <ESC>:w!<CR>
+inoremap <C-s> <ESC>:w!<CR>
+vnoremap <C-s> <ESC>:w!<CR>
+" Quit
+nnoremap <C-w> <ESC>:q<CR>
+inoremap <C-w> <ESC>:q<CR>
+vnoremap <C-w> <ESC>:q<CR>
+
+" }}}
+" BÉPO KeyBoard      {{{
+
+"    Escape
+inoremap <C-c> <Esc>
+"    Navigation
+noremap c h
+noremap t gj
+noremap s gk
+noremap r l
+"    Mouvement
+noremap e e
+noremap a b
+noremap A ^
+noremap æ ^
+noremap E $
+"    Change Motion
+noremap v c
+noremap V C
+"    Delete Motion
+noremap d d
+noremap D D
+"    Till Motion
+noremap l t
+noremap L T
+"    Visual Mode
+noremap q v
+noremap Q V
+"    Replace Motion
+noremap h r
+noremap H R
+"    UP/Down
+noremap T <C-D>
+noremap S <C-U>
+"    Undo/Redo
+noremap b <ESC>:redo<CR>
+noremap é <ESC>:undo<CR>
+"    Insert Mode
+noremap u a
+noremap U A
+noremap i i
+noremap I I
+vnoremap i I
+"    Macro
+noremap j q
+
+" }}}
