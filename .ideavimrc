@@ -11,6 +11,7 @@ set nohlsearch
 set scrolloff=7
 " Edit Vimrc and reload vimrc
 nnoremap <Leader>ev <ESC>:e $myvimrc<CR>
+nnoremap <Leader>o  <ESC>:so $myvimrc<CR>
 nnoremap <Leader>af <ESC>:so %<CR>
 " Indent
 set autoindent smartindent
@@ -27,6 +28,7 @@ vnoremap > >gv
 
 let $profile = $PSProfile
 
+" }}}
 " Shortcut           {{{
 
 " Search and center
@@ -60,7 +62,7 @@ inoremap <C-w> <ESC>:q<CR>
 vnoremap <C-w> <ESC>:q<CR>
 
 " }}}
-" BÃ‰PO KeyBoard      {{{
+" BÉPO KeyBoard      {{{
 
 "    Escape
 inoremap <C-c> <Esc>
@@ -73,7 +75,7 @@ noremap r l
 noremap e e
 noremap a b
 noremap A ^
-noremap Ã¦ ^
+noremap æ ^
 noremap E $
 "    Change Motion
 noremap v c
@@ -95,7 +97,7 @@ noremap T <C-D>
 noremap S <C-U>
 "    Undo/Redo
 noremap b <ESC>:redo<CR>
-noremap Ã© <ESC>:undo<CR>
+noremap é <ESC>:undo<CR>
 "    Insert Mode
 noremap u a
 noremap U A
